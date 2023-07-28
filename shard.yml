@@ -9,8 +9,8 @@ crystal: 1.9.2
 license: LGPL
 
 dependencies:
-  streamio-addon-devkit:
-    github: ryan-kraay/streamio-addon-devkit
+  stremio-addon-devkit:
+    github: ryan-kraay/stremio-addon-devkit
     branch: main
   kemal:
     github: kemalcr/kemal
