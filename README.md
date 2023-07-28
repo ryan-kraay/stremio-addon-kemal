@@ -1,4 +1,33 @@
-# stremio-addon-kemal
+<div align="center">
+  <a href="https://github.com/ryan-kraay/stremio-addon-kemal/" target="_blank" rel="noopener noreferrer">
+    <img width="300" src="https://raw.githubusercontent.com/ryan-kraay/stremio-addon-kemal/master/assets/logo.png" alt="Logo">
+  </a>
+
+  <h1>The Unofficial Stremio Addon SDK for the Kemal web framework</h1>
+
+  <p>
+    <a href="https://github.com/ryan-kraay/stremio-addon-kemal/actions/workflows/ci.yml">
+      <img src="https://github.com/ryan-kraay/stremio-addon-kemal/actions/workflows/ci.yml/badge.svg" alt="Build Status">
+    </a>
+    <a href="https://github.com/ryan-kraay/stremio-addon-kemal/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/ryan-kraay/stremio-addon-kemal.svg" alt="License">
+    </a>
+    <a href="https://ryan-kraay.github.io/stremio-addon-kemal/index.html">
+      <img src="https://img.shields.io/badge/documentation-API-f06" alt="API Documentation">
+    </a>
+    <a href="https://github.com/ryan-kraay/stremio-addon-kemal/releases">
+      <img src="https://img.shields.io/github/release/ryan-kraay/stremio-addon-kemal.svg" alt="GitHub release">
+    </a>
+  </p>
+
+  <h3>
+    <a href="https://github.com/ryan-kraay/stremio-addon-kemal/">Website</a>
+    <span> • </span>
+    <a href="https://ryan-kraay.github.io/stremio-addon-kemal/index.html">Shard Docs</a>
+  </h3>
+</div>
+
+<hr/>
 
 A [Stremio Addon](https://www.stremio.com/addon-sdk) tailored for the [Kemal](https://github.com/kemalcr/kemal) web framework.
 
