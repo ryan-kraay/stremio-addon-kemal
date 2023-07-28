@@ -1,0 +1,22 @@
+name: stremio-addon-kemal
+version: 0.0.1
+
+authors:
+  - Ryan Kraay <6840071+ryan-kraay@users.noreply.github.com>
+
+crystal: 1.9.2
+
+license: LGPL
+
+dependencies:
+  stremio-addon-devkit:
+    github: ryan-kraay/stremio-addon-devkit
+    branch: main
+  kemal:
+    github: kemalcr/kemal
+    version: ~> 1.4.0
+
+development_dependencies:
+  spectator:
+    gitlab: arctic-fox/spectator
+    version: ~> 0.11.6

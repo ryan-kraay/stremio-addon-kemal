@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+    branches:
+      - "**"
+
+  pull_request:
+    branches:
+      - "**:**"
+
+  schedule:
+    - cron: '0 6 * * 6'
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        crystal: [1.9.2]  # This needs to be kept in sync with /shards.yml  # TODO include "latest" once this is more mature
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download source
+        uses: actions/checkout@v3
+      - name: Install Crystal ${{ matrix.crystal }}
+        uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: ${{ matrix.crystal }}
+          shards: true
+      - name: Check Formatting
+        run: crystal tool format --check
+      - name: Cache shards
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/shards
+          key: ${{ runner.os }}-shards-${{ hashFiles('shard.yml') }}
+          restore-keys: ${{ runner.os }}-shards-
+      - name: Install shards
+        run: shards update
+      - run: crystal spec --order=random --error-on-warnings
+      - run: crystal spec -Dpreview_mt --order=random --error-on-warnings
