@@ -14,7 +14,7 @@ dependencies:
     branch: main
   kemal:
     github: kemalcr/kemal
-    version: ~> v1.4.0
+    version: ~> 1.4.0
 
 development_dependencies:
   spectator:
